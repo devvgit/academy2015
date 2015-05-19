@@ -29,7 +29,7 @@ function handyFunction(Closure $func)
 
 echo handyFunction(function() { return 123; }) . PHP_EOL;
 
-// Closures can use parameters from different scopes
+// Closures can use parameters from another scope
 $number = 1;
 $leadingZeroes = function($numZeroes) use ($number) {
     return str_pad($number, $numZeroes, '0', STR_PAD_LEFT);
