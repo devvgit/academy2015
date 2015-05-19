@@ -1,0 +1,12 @@
+{
+  "name": "m1x0n/academy-lection-one",
+  "description": "Files for the first lection",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Michael Morozov",
+      "email": "mmorozovm@gmail.com"
+    }
+  ]
+}
