@@ -11,5 +11,8 @@
   ],
   "autoload": {
     "classmap": ["src/"]
+  },
+  "require": {
+    "lastguest/pixeler": "^1.0"
   }
 }
