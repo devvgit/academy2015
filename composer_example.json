@@ -1,0 +1,72 @@
+{
+  "name": "vendor-name/project-name",
+  "description": "Test package",
+  "version": "0.0.1",
+  "type": "library",
+  "keywords": ["my", "test", "awesome"],
+  "homepage": "http://domain.com",
+  "time": "2014-01-01",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Super Dev",
+      "email": "devel@example.com",
+      "homepage": "http://www.domain.com",
+      "role": "Developer"
+    }
+  ],
+  "support": {
+    "email": "support@exemple.org (wiki, issues, forum, irc, source)"
+  },
+  "require": {
+    "monolog/monolog": "1.0.*",
+    "joli/ternel": "@dev",
+    "acme/foo": "dev-master#2eb0c0978d290a1c45346a1955188929cb4e5db7"
+  },
+  "suggest": {
+    "monolog/monolog": "Allows more advanced logging of the application flow"
+  },
+  "autoload": {
+    "psr-4": {
+      "Monolog\\": "src/",
+      "Vendor\\Namespace\\": ""
+    },
+    "psr-0": {
+      "Monolog": "src/",
+      "Vendor\\Namespace": ["src/", "lib/"],
+      "Pear_Style": "src/",
+      "": "src/"
+    },
+    "classmap": ["src/", "lib/", "Something.php"],
+    "files": ["src/MyLibrary/functions.php"]
+  },
+  "minimum-stability": "stable",
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "http://packages.example.com"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/Seldaek/monolog"
+    },
+    {
+      "type": "pear",
+      "url": "http://pear2.php.net"
+    }
+  ],
+  "config": {
+    "process-timeout": 300,
+    "vendor-dir": "vendor",
+    "bin-dir": "bin"
+  },
+  "prefer-stable": true,
+  "scripts": {
+    "post-install-cmd": [
+      "MyVendor\\MyClass::warmCache",
+      "phpunit -c app/"
+    ]
+  },
+  "extra": { "key": "value" },
+  "bin": ["./bin/runme"]
+}
